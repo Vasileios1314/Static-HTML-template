@@ -13,3 +13,20 @@ function updateCounters() {
   }
   
   updateCounters();
+
+  function toggleDone(event) {
+    const checkbox = event.currentTarget;
+    
+    if (checkbox.checked) {
+      checkbox.parentElement.parentElement.className = "todo completed";
+    } else {
+      checkbox.parentElement.parentElement.className = "todo";
+    }
+    updateCounters();
+  }
+  
+  const checkboxes = document.querySelectorAll(".todo input");
+  
+  for (let i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].addEventListener("change", toggleDone);
+  }
