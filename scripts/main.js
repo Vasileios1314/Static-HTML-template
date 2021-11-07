@@ -64,3 +64,14 @@ function updateCounters() {
 
     updateCounters();
   });
+
+  function cleanUpDoneTodos() {
+    const doneItems = document.querySelectorAll(".completed");
+  
+    for (let i = 0; i < doneItems.length; i++) {
+        doneItems[i].remove();
+    }
+  
+    updateCounters();
+  }
+  document.getElementById("clean-up").addEventListener("click", cleanUpDoneTodos);
