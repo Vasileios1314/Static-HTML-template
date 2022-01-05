@@ -71,7 +71,7 @@ function updateCounters() {
     for (let i = 0; i < doneItems.length; i++) {
         doneItems[i].remove();
     }
-  
+   
     updateCounters();
   }
   document.getElementById("clean-up").addEventListener("click", cleanUpDoneTodos);
